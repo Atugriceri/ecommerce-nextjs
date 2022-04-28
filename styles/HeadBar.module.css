@@ -1,0 +1,17 @@
+.headbar {
+  background-color: var(--light);
+}
+
+.headbar .link {
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.headbar .active {
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--dark);
+}
