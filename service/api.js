@@ -23,7 +23,7 @@ export const fetchFilters = async() => {
   const { data } = await instance.get(
     `${ENDPOINTS.fetchFilterBar}`
   )
-  return data
+  return data.Context
 }
 
 export const fetchBreadCrumbInfo = async() => {
