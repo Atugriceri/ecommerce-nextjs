@@ -1,8 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import { useProduct } from '../contexts/ProductContext'
+import { useFilter } from '../contexts/FilterContext'
+import { useBreadcrumb } from '../contexts/BreadcrumbContext'
+//route => localhost:3000/
 export default function Home() {
+  const { products } = useProduct()
+  const { filters } = useFilter()
+  const { breadcrumb } = useBreadcrumb()
+  console.log(products)
+  console.log(filters)
+  console.log(breadcrumb)
   return (
     <div className={styles.container}>
       <Head>
