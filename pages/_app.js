@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import { ProductProvider } from '../contexts/ProductContext'
 import { FilterProvider } from '../contexts/FilterContext'
 import { BreadcrumbProvider } from '../contexts/BreadcrumbContext'
