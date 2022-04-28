@@ -21,4 +21,18 @@ body {
   box-sizing: border-box;
 }
 
+.breadcrumb-item {
+  font-size: 12px;
+  font-weight: 600;
+}
 
+.dropdownBtn {
+  border-right: 1px solid #dee2e6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdownBtn i {
+  -webkit-text-stroke: 1.5px;
+  color: var(--secondary);
+}
