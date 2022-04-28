@@ -12,7 +12,7 @@ const FilterProvider = ({ children }) => {
     const getFilters = async () => {
       try {
         const filterData = await fetchFilters()
-        setFilters(filterData.Context)
+        setFilters(filterData)
         setLoading(false)
       } catch (e) {
         setLoading(false)
