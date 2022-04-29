@@ -15,7 +15,7 @@ console.log()
   return (
     <>
       <div className="container shadow-sm border rounded p-0">
-        <div className="d-flex justify-content-start">
+        <div className="d-flex justify-content-start scrollMenu">
           {!loading && filterBarArr.map((item) => {
             return (
               <div className={`py-4 dropdownBtn`}>
@@ -26,7 +26,7 @@ console.log()
           })}
         </div>
       </div>
-      <div className="container d-flex justify-content-end p-0 mt-4">
+      <div className="container d-flex justify-content-end p-0 mt-4 px-2 px-md-0">
         <select className="bg-white border rounded p-2">
           {!loading && filters?.SortModule?.FilterModuleItems.map((item) => {
             return (
