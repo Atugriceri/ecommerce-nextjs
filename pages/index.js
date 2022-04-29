@@ -14,9 +14,7 @@ export default function Home() {
       <Head>
         <title>{breadcrumb.MetaTitle}</title>
         <meta name={breadcrumb.Name} content={breadcrumb.MetaDescription} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
        <HeadBar />
        <header>

@@ -1,15 +1,19 @@
 import axios from 'axios'
 
-const BASE_URL = "https://www.mockachino.com/42a008d9-66a2-41/"
+const BASE_URL = "https://www.mockachino.com/42a008d9-66a2-41"
 
 const ENDPOINTS = {
-  fetchProductList: "products",
-  fetchFilterBar: "filter",
-  fetchBreadCrumb: "filter",
+  fetchProductList: "/products",
+  fetchFilterBar: "/filter",
+  fetchBreadCrumb: "/filter",
 }
 
 const instance = axios.create({
   baseURL: BASE_URL,
+  headers: {
+    'Access-Control-Allow-Credentials':true,
+    'Content-Type': 'application/json',
+},
 })
 
 export const fetchProducts = async() => {

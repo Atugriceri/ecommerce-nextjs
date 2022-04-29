@@ -75,3 +75,169 @@ body {
   font-size: 16px;
   font-weight: 900;
 }
+
+.quick-cargo {
+  top:1rem;
+  left: 1rem;
+  width: 25%;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  background-color: var(--white);
+  color: var(--info);
+  z-index: 900;
+}
+
+.cargo-free {
+  top:5rem;
+  left: 1rem;
+  width: 25%;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  background-color: var(--white);
+  color: var(--success);
+  z-index: 900;
+}
+
+.stock {
+  top:9rem;
+  left: 1rem;
+  width: 25%;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  background-color: var(--white);
+  color: var(--danger);
+  z-index: 900;
+}
+
+.favorite-button {
+  top: 1rem;
+  right: 1rem;
+  z-index: 900;
+}
+
+.favorite-button button {
+  color: var(--primary);
+  font-size: 1rem;
+  
+}
+
+.rate {
+  bottom: 9rem;
+  left: 1rem;
+  width: 25%;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  background-color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 900;
+}
+
+.rate i {
+  color: var(--warning);
+  margin-right: 0.5rem;
+}
+
+.add-to-cart-overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 800;
+  top: 0;
+}
+
+.add-to-cart-overlay:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.add-to-cart-btn {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  font-size: 12px;
+  padding: 0.5rem 2rem;
+}
+
+.dropdown-btn {
+  background-color: var(--white);
+  border: none;
+}
+
+.dropdown-btn i {
+  margin-right: 0.5rem;
+}
+
+.dropdown-item {
+  width: 250px;
+}
+
+.dropdown-menu {
+  width: 400px;
+
+}
+
+.dropdown-item img {
+  width: 100px;
+}
+
+.primary-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+  font-size: 12px;
+}
+
+
+
+.primary-outline-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 12px;
+}
+
+/* .primary-btn:hover {
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.primary-outline-btn:hover {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+} */
+
+
+.dropdown-header span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.count-badge {
+  position: absolute;
+  background-color: var(--danger);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  right: -0.4rem;
+}
+
+.dropdown-box {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.animation-dropdown {
+  height: 300px !important;
+}
