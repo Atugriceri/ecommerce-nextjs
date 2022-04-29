@@ -1,16 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import HeadBar from '../components/HeadBar'
 import Navbar from '../components/Navbar'
-import { useProduct } from '../contexts/ProductContext'
-
 import { useBreadcrumb } from '../contexts/BreadcrumbContext'
 import Breadcrumb from '../components/Breadcrumb'
 import Filter from '../components/Filter'
-//route => localhost:3000/
-export default function Home() {
-  const { products } = useProduct()
+import ProductCard from '../components/ProductCard'
 
+export default function Home() {
   const { breadcrumb } = useBreadcrumb()
 
   return (
@@ -28,6 +24,7 @@ export default function Home() {
         <Breadcrumb />
         <Filter />
        </header>
+       <ProductCard />
       </main>
     </div>
   )
