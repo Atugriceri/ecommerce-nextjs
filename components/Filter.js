@@ -1,6 +1,5 @@
 import React from 'react'
 import { useFilter } from '../contexts/FilterContext'
-import Link from 'next/link'
 
 const Filter = () => {
   const { filters, loading } = useFilter()
@@ -11,7 +10,6 @@ const Filter = () => {
   for (let x in filterBar) {
     filterBar[x].FilterModuleItems.length > 1 && filterBarArr.push(filterBar[x])
   }
-console.log()
   return (
     <>
       <div className="container shadow-sm border rounded p-0">

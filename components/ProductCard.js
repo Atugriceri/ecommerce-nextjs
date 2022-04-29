@@ -16,21 +16,21 @@ const ProductCard = () => {
             return (
               <div key={item.ListingId} className="col mb-5 position-relative">
                 {item.IsQuickCargo && (
-                  <div className="bdg rounded-3 quick-cargo position-absolute">
+                  <div className="bdg rounded-3 quick-cargo position-absolute d-none d-sm-block">
                     Hızlı Gönderi
                   </div>
                 )}
                 {
-                  /* item.AppliedDiscountRules[0]?.IsCargoFree && */ <div className="bdg cargo-free position-absolute rounded-3">
+                  /* item.AppliedDiscountRules[0]?.IsCargoFree && */ <div className="bdg cargo-free position-absolute rounded-3 d-none d-sm-block">
                     Kargo Bedava
                   </div>
                 }
                 {item.StockQuantity < 6 && (
-                  <div className="bdg stock position-absolute rounded-3">
+                  <div className="bdg stock position-absolute rounded-3 d-none d-sm-block">
                     Son {item.StockQuantity}
                   </div>
                 )}
-                <div className="rate position-absolute rounded-3">
+                <div className="rate position-absolute rounded-3 d-none d-sm-block">
                   <i class="bi bi-star-fill"></i>
                   {parseFloat(item.PointAverage).toFixed(2)}
                 </div>
@@ -57,10 +57,10 @@ const ProductCard = () => {
                   </div>
 
                   <div className="card-body">
-                    <h6 className="brand">
+                    <span className="brand">
                       {item.ProductBrand}
                       <span className="product-title"> {item.ModelName}</span>
-                    </h6>
+                    </span>
                     <div className="row">
                       <div className="col-2">
                         <div className="discountBadge py-2 px-1 rounded-3">
@@ -68,12 +68,12 @@ const ProductCard = () => {
                         </div>
                       </div>
                       <div className="col-10">
-                        <div className="d-inline-block px-3">
+                        <div className="d-inline-block ms-sm-3 ms-md-2 px-2 py-1">
                           <div className="d-block prev-price text-decoration-line-through">
                             {item.AppliedDiscountRules[0]?.PreviousPrice} TL
                           </div>
                           <div className="d-block current-price">
-                            {item.AppliedDiscountRules[0]?.Price} TL
+                            {parseFloat(item.AppliedDiscountRules[0]?.Price).toFixed(2)} TL
                           </div>
                         </div>
                       </div>

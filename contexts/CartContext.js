@@ -22,10 +22,20 @@ const CartProvider = ({children}) => {
   }
 
   const removeFromCart = (item_id) => {
-    const filtered = items.filter((item) => item.ListingId !== item_id)
+
+    const updatedItems = items.map(item => {
+      if(item.ListingId === item_id) return {
+        ...item,
+        deleted: true
+      }
+      return item
+    })
+
+    const filtered = items.filter(item =>item.ListingId !== item_id)
+    
+    setItems(updatedItems)
     setTimeout(() => {
       setItems(filtered)
-      setLoading(true)
     }, 1000)
     setLoading(false)
   }

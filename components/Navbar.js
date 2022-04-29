@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCart } from "../contexts/CartContext";
 
 const Navbar = () => {
-  const { items, removeFromCart, loading } = useCart();
+  const { items, removeFromCart } = useCart();
   return (
     <header className="border-bottom border-2">
       <div className="container">
@@ -24,7 +24,11 @@ const Navbar = () => {
             <div className="dropdown">
               <button
                 className="dropdown-btn"
-                type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"
+                type="button"
+                id="dropdownMenuClickable"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="false"
+                aria-expanded="false"
               >
                 <i className="bi bi-bag"></i>
                 <span className="count-badge rounded-circle px-1">
@@ -33,8 +37,8 @@ const Navbar = () => {
                 Sepetim
               </button>
               <ul
-                className="dropdown-menu dropdown-menu-light"   
-                onClick={event => event.stopPropagation()}             
+                className="dropdown-menu dropdown-menu-light"
+                onClick={(event) => event.stopPropagation()}
               >
                 {items.length < 1 && (
                   <li>
@@ -53,23 +57,47 @@ const Navbar = () => {
                         <span>Sepetim, {items.length} ürün</span>
                       </div>
                     </li>
-                    {items.map((item) => {                   
+                    {items.map((item, key) => {
+                      console.log(item)
                       return (
                         <>
-                          <li>
-                            {!loading && "Ürün sepetinizden çıkarıldı."}
-                            <div className="dropdown-item">
-                              <img
-                                src={item.PictureUrl}
-                                className="card-img-top rounded-top-5"
-                                alt={item.FriendlyUrlName}
-                              />
-                              <button onClick={() => removeFromCart(item.ListingId)} >
-                                <i class="bi bi-trash"></i>
-                              </button>
-                            </div>
+                          <li className="d-flex" key={key}>
+                            {item.deleted && (
+                              <span className="animation-delete">
+                                Ürün sepetinizden çıkarıldı.
+                              </span>
+                            )}
+                            {!item.deleted && (
+                              <div className="dropdown-item">
+                                <div className="row">
+                                  <div className="col-4">
+                                    <img
+                                      src={item.PictureUrl}
+                                      className="card-img-top rounded-4"
+                                      alt={item.FriendlyUrlName}
+                                    />
+                                  </div>
+                                  <div className="col-6 d-flex flex-column">
+                                    <span className="brand">{item.ProductBrand}</span>
+                                    <span className="product-title text-truncate">{item.ModelName}</span>
+                                    <span className="productInfo">{item.Color} {item.StockQuantity} Adet</span>
+                                    <span className="prev-price text-decoration-line-through mt-auto">{item.StickerPrice}</span>
+                                    <span className="current-price text-danger">{item.DiscountPrice}</span>
+                                  </div>
+                                  <div className="col-2">
+                                    <button
+                                      className="deleteBtn"
+                                      onClick={() =>
+                                        removeFromCart(item.ListingId)
+                                      }
+                                    >
+                                      <i class="bi bi-trash"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                           </li>
-                          
                         </>
                       );
                     })}
