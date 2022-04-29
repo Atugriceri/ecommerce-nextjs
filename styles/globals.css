@@ -36,3 +36,42 @@ body {
   -webkit-text-stroke: 1.5px;
   color: var(--secondary);
 }
+
+.scrollMenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollMenu div {
+  display: inline-block;
+}
+
+.discountBadge {
+  background-color: var(--danger);
+  display: inline-block;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.brand {
+  font-size: 14px;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.product-title {
+  font-size: 14px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.prev-price {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.current-price {
+  font-size: 16px;
+  font-weight: 900;
+}
