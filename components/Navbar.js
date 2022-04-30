@@ -58,7 +58,6 @@ const Navbar = () => {
                       </div>
                     </li>
                     {items.map((item, key) => {
-                      console.log(item)
                       return (
                         <>
                           <li className="d-flex" key={key}>
