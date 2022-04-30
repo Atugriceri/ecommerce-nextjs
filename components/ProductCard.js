@@ -31,12 +31,12 @@ const ProductCard = () => {
                   </div>
                 )}
                 <div className="rate position-absolute rounded-3 d-none d-sm-block">
-                  <i class="bi bi-star-fill"></i>
+                  <i className="bi bi-star-fill"></i>
                   {parseFloat(item.PointAverage).toFixed(2)}
                 </div>
                 <div className="favorite-button position-absolute">
                   <button className="rounded-circle border-0">
-                    <i class="bi bi-suit-heart"></i>
+                    <i className="bi bi-suit-heart"></i>
                   </button>
                 </div>
                 <div>

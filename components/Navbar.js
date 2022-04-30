@@ -57,10 +57,10 @@ const Navbar = () => {
                         <span>Sepetim, {items.length} ürün</span>
                       </div>
                     </li>
-                    {items.map((item, key) => {
+                    {items.map((item) => {
                       return (
                         <>
-                          <li className="d-flex" key={key}>
+                          <li className="d-flex" key={item.ListingId}>
                             {item.deleted && (
                               <span className="animation-delete">
                                 Ürün sepetinizden çıkarıldı.
@@ -90,7 +90,7 @@ const Navbar = () => {
                                         removeFromCart(item.ListingId)
                                       }
                                     >
-                                      <i class="bi bi-trash"></i>
+                                      <i className="bi bi-trash"></i>
                                     </button>
                                   </div>
                                 </div>
