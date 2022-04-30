@@ -62,12 +62,12 @@ const ProductCard = () => {
                       <span className="product-title"> {item.ModelName}</span>
                     </span>
                     <div className="row">
-                      <div className="col-2">
+                      <div className="col-3">
                         <div className="discountBadge py-2 px-1 rounded-3">
                           %{item.AppliedDiscountRules[0]?.Rate}
                         </div>
                       </div>
-                      <div className="col-10">
+                      <div className="col-9">
                         <div className="d-inline-block ms-sm-3 ms-md-2 px-2 py-1">
                           <div className="d-block prev-price text-decoration-line-through">
                             {item.AppliedDiscountRules[0]?.PreviousPrice} TL
