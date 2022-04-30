@@ -4,7 +4,7 @@ import { useCart } from "../contexts/CartContext";
 
 const ProductCard = () => {
   const { products, loading } = useProduct();
-  const { addToCart, items } = useCart();
+  const { addToCart, items, removeFromCart } = useCart();
   return (
     <div className="container p-0 my-4">
       <div className="row row-cols-2 row-cols-md-4 g-md-2 px-0 mx-0">
@@ -49,7 +49,7 @@ const ProductCard = () => {
                     <div className="add-to-cart-overlay position-absolute">
                       <button
                         className="add-to-cart-btn rounded-3"
-                        onClick={() => addToCart(item, findCartItem)}
+                        onClick={() => !findCartItem ? addToCart(item, findCartItem) : removeFromCart(item.ListingId)}
                       >
                         {!findCartItem ? "Sepete Ekle" : "Sepetten Çıkar"}
                       </button>
